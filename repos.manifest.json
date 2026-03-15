@@ -1,0 +1,50 @@
+{
+  "baseDirectory": "repos",
+  "repositories": [
+    {
+      "name": "organizational-os-framework",
+      "url": "https://github.com/regen-coordination/organizational-os-framework.git",
+      "branch": "main"
+    },
+    {
+      "name": "organizational-os-template",
+      "url": "https://github.com/regen-coordination/organizational-os-template.git",
+      "branch": "main"
+    },
+    {
+      "name": "organizational-os",
+      "url": "https://github.com/regen-coordination/organizational-os.git",
+      "branch": "main"
+    },
+    {
+      "name": "refi-dao-os",
+      "url": "https://github.com/luizfernandosg/refi-dao-os.git",
+      "branch": "main"
+    },
+    {
+      "name": "ReFi-Barcelona",
+      "url": "https://github.com/luizfernandosg/ReFi-Barcelona.git",
+      "branch": "main"
+    },
+    {
+      "name": "ReFi-BCN-Website",
+      "url": "https://github.com/refibcn/ReFi-BCN-Website.git",
+      "branch": "main"
+    },
+    {
+      "name": "Regenerant-Catalunya",
+      "url": "https://github.com/refibcn/Regenerant-Catalunya.git",
+      "branch": "main"
+    },
+    {
+      "name": "regen-coordination-os",
+      "url": "https://github.com/regen-coordination/regen-coordination-os.git",
+      "branch": "main"
+    },
+    {
+      "name": "Local-ReFi-Toolkit",
+      "url": "https://github.com/regen-coordination/local-refi-toolkit.git",
+      "branch": "main"
+    }
+  ]
+}

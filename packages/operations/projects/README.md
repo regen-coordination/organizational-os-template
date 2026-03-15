@@ -102,6 +102,6 @@ The package includes integration with schema generation that:
 
 ## Related Documentation
 
-- Framework: [`../../../../organizational-os-framework/docs/03-operational-patterns/project-tracking.md`](../../../../organizational-os-framework/docs/03-operational-patterns/project-tracking.md)
-- Schema: [`../../../../organizational-os-framework/schemas/projects.json-ld`](../../../../organizational-os-framework/schemas/projects.json-ld)
+- Framework: [`../../../../organizational-os/packages/framework/docs/03-operational-patterns/project-tracking.md`](../../../../organizational-os/packages/framework/docs/03-operational-patterns/project-tracking.md)
+- Schema: [`../../../../organizational-os/packages/framework/schemas/projects.json-ld`](../../../../organizational-os/packages/framework/schemas/projects.json-ld)
 - IDEA Framework: [`.cursor/rules/idea_planning.mdc`](../../../../.cursor/rules/idea_planning.mdc)

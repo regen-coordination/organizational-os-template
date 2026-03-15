@@ -103,5 +103,5 @@ The package includes a script that:
 
 ## Related Documentation
 
-- Framework: [`../../../../organizational-os-framework/docs/03-operational-patterns/meetings-management.md`](../../../../organizational-os-framework/docs/03-operational-patterns/meetings-management.md)
-- Schema: [`../../../../organizational-os-framework/schemas/meetings.json-ld`](../../../../organizational-os-framework/schemas/meetings.json-ld)
+- Framework: [`../../../../organizational-os/packages/framework/docs/03-operational-patterns/meetings-management.md`](../../../../organizational-os/packages/framework/docs/03-operational-patterns/meetings-management.md)
+- Schema: [`../../../../organizational-os/packages/framework/schemas/meetings.json-ld`](../../../../organizational-os/packages/framework/schemas/meetings.json-ld)

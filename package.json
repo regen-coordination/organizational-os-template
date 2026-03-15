@@ -10,6 +10,8 @@
     "url": "https://github.com/organizational-os/organizational-os-template.git"
   },
   "scripts": {
+    "clone:repos": "node scripts/clone-linked-repos.mjs",
+    "bootstrap:local": "npm run clone:repos && npm install",
     "quartz": "./quartz/bootstrap-cli.mjs",
     "setup": "node scripts/setup-org-os.mjs",
     "setup:cursor": "node scripts/setup-cursor-rules.mjs",

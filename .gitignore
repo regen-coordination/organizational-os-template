@@ -3,6 +3,10 @@ node_modules/
 .pnp
 .pnp.js
 
+# Local linked repo clones
+repos/*
+!repos/README.md
+
 # Build / output
 dist
 build

@@ -44,6 +44,36 @@ GitHub Actions will automatically deploy to GitHub Pages.
 
 ---
 
+## Local clone workspace (visible `repos/` folder)
+
+To clone/update linked ecosystem repositories into a visible local `repos/` directory:
+
+```bash
+pnpm run clone:repos
+```
+
+If you prefer npm:
+
+```bash
+npm run clone:repos
+```
+
+Bootstrap local setup (clone repos + install dependencies):
+
+```bash
+pnpm run bootstrap:local
+```
+
+Dry run preview:
+
+```bash
+node scripts/clone-linked-repos.mjs --dry-run
+```
+
+Linked repositories are defined in `repos.manifest.json`.
+
+---
+
 ## Features
 
 ### Organizational Identity (EIP-4824)
@@ -89,11 +119,11 @@ GitHub Actions will automatically deploy to GitHub Pages.
 
 ## Framework Reference
 
-This template implements the **[Organizational OS Framework](../organizational-os-framework/)**:
+This template implements the **[Organizational OS Framework](../organizational-os/packages/framework/)**:
 
-- Standards and patterns: [`../organizational-os-framework/docs/`](../organizational-os-framework/docs/)
-- Schema definitions: [`../organizational-os-framework/schemas/`](../organizational-os-framework/schemas/)
-- Case studies: [`../organizational-os-framework/docs/06-case-studies/`](../organizational-os-framework/docs/06-case-studies/)
+- Standards and patterns: [`../organizational-os/packages/framework/docs/`](../organizational-os/packages/framework/docs/)
+- Schema definitions: [`../organizational-os/packages/framework/schemas/`](../organizational-os/packages/framework/schemas/)
+- Case studies: [`../organizational-os/packages/framework/docs/06-case-studies/`](../organizational-os/packages/framework/docs/06-case-studies/)
 
 ---
 
