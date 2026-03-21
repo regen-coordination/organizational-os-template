@@ -1,14 +1,55 @@
 # Knowledge Folder Structure
 
-**Purpose:** Knowledge commons directory for organizational memory
-**Location:** `/knowledge/` in each org-os instance
-**Status:** Implemented in refi-dao-os, refi-bcn-os, org-os
+**Purpose:** Knowledge commons directory for organizational memory  
+**Location:** `/knowledge/` in each org-os instance  
+**Status:** ✅ Implemented in refi-dao-os, refi-bcn-os, org-os
 
 ---
 
 ## Overview
 
 The `knowledge/` directory is the **canonical location for organizational knowledge** — structured for both human readability and agent processing.
+
+**Knowledge Commons Architecture:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  KNOWLEDGE COMMONS — Three-Layer Architecture                    │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  LAYER 1: CAPTURE (AI-Powered)                                  │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐                      │
+│  │   OPAL   │  │ Egregore │  │   KOI    │                      │
+│  │ (omni-   │  │ (Curve   │  │(BlockSci-│                      │
+│  │ harmonic)│  │  Labs)   │  │  ence)   │                      │
+│  └────┬─────┘  └────┬─────┘  └────┬─────┘                      │
+│       │             │             │                              │
+│       └─────────────┴─────────────┘                              │
+│                     ↓                                            │
+│  LAYER 2: STRUCTURE (Human Review)                                │
+│  ┌────────────────────────────────────┐                          │
+│  │         knowledge/                 │                          │
+│  ├────────────────────────────────────┤                          │
+│  │ domains/    ← By topic             │                          │
+│  │ patterns/   ← Recurring patterns   │                          │
+│  │ insights/   ← Reflections          │                          │
+│  │ entities/   ← People, orgs (OPAL)  │                          │
+│  │ from-nodes/ ← Hub aggregation      │                          │
+│  └────────────────────────────────────┘                          │
+│                     ↓                                            │
+│  LAYER 3: DISTRIBUTION (Federation)                               │
+│  ┌──────────┐    ┌──────────┐    ┌──────────┐                    │
+│  │   Hub    │◄───┤  Sync   ├───►│  Nodes   │                    │
+│  │(regen-  │    │Workflow │    │(9 pilots)│                    │
+│  │coord)   │    └──────────┘    └──────────┘                    │
+│  └────┬─────┘                                                  │
+│       │ Skill Distribution: Mondays (Hub → Nodes)              │
+│       │ Knowledge Aggregation: Mondays (Nodes → Hub)            │
+│       │ Council: Fridays 2pm UTC (all nodes)                   │
+│       │ Peer Sync: ReFi DAO ↔ ReFi BCN (bidirectional)         │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ```
 knowledge/

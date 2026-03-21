@@ -1,7 +1,7 @@
 # KOI Integration
 
 **Package:** `packages/koi-bridge/`  
-**Source:** BlockScience/Metagov/RMIT KOI-net  
+**Source:** [KOI-net](https://github.com/blockscience/koi-net) by **BlockScience**, with contributions from Metagov and RMIT  
 **Status:** 🟡 **Skeleton Ready, Implementation TBD**  
 **Type:** Distributed Knowledge Graph
 
@@ -9,13 +9,36 @@
 
 ## What is KOI?
 
-KOI (Knowledge Organization Infrastructure) is a **distributed protocol for federated knowledge graphs**:
+**KOI** (Knowledge Organization Infrastructure) is a **distributed protocol for federated knowledge graphs**, developed by **BlockScience** with contributions from the Metagov and RMIT communities:
 
-- Network-wide knowledge sharing via RIDs (Repository Independent Data)
-- Event-driven sync (NEW/UPDATE/FORGET)
-- Node types: partial (lightweight) or full (coordinator)
-- Python-based with TypeScript bridge
-- Real-time or batched sync
+> *Network-wide knowledge sharing via RIDs (Repository Independent Data)*
+> *Event-driven sync (NEW/UPDATE/FORGET)*
+> *Node types: partial (lightweight) or full (coordinator)*
+> *Python-based core with TypeScript bridge*
+> *Real-time or batched sync*
+
+**Architecture Overview:**
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  KOI NETWORK TOPOLOGY                                        │
+├─────────────────────────────────────────────────────────────┤
+│                                                              │
+│  ┌──────────────┐      ┌──────────────┐      ┌────────────┐  │
+│  │   Node A     │◄────►│ Coordinator  │◄────►│   Node B   │  │
+│  │  (partial)   │      │   (full)      │      │  (partial) │  │
+│  └──────┬───────┘      └──────┬───────┘      └─────┬──────┘  │
+│         │                     │                     │        │
+│    ┌────┴────┐           ┌────┴────┐          ┌────┴────┐    │
+│    │ Git Repo│           │ Routing │          │ Git Repo│    │
+│    │         │           │  Table  │          │         │    │
+│    └─────────┘           └─────────┘          └─────────┘    │
+│                                                              │
+│  Events: NEW → UPDATE → FORGET                              │
+│  RID Format: rid:<scheme>:<type>:<id>                       │
+│                                                              │
+└─────────────────────────────────────────────────────────────┘
+```
 
 ---
 

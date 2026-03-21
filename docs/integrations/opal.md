@@ -1,7 +1,7 @@
 # OPAL Integration
 
 **Package:** `packages/opal-bridge/`  
-**Source:** [github.com/omniharmonic/opal](https://github.com/omniharmonic/opal)  
+**Source:** [github.com/omniharmonic/opal](https://github.com/omniharmonic/opal) by **omniharmonic**  
 **Status:** ✅ **Complete & Ready**  
 **Type:** AI-powered Knowledge Garden
 
@@ -9,17 +9,48 @@
 
 ## What is OPAL?
 
-OPAL (Open Protocol Agent Librarian) is an **AI-powered knowledge garden** for Claude Code:
+**OPAL** (Open Protocol Agent Librarian) is an **AI-powered knowledge garden** for Claude Code, created by [**omniharmonic**](https://github.com/omniharmonic):
 
-- Extracts entities (people, orgs, patterns, concepts) from documents
-- Human-in-the-loop review before adding to knowledge base
-- 23 slash commands for knowledge management
-- Local-first with Git-based persistence
-- Multi-template support (regen template for ecological knowledge)
+> *Extracts entities (people, orgs, patterns, concepts) from documents*
+> *Human-in-the-loop review before adding to knowledge base*
+> *23 slash commands for knowledge management*
+> *Local-first with Git-based persistence*
+> *Multi-template support (regen template for ecological knowledge)*
+
+**Architecture Overview:**
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  OPAL KNOWLEDGE FLOW                                         │
+├─────────────────────────────────────────────────────────────┤
+│                                                              │
+│  Content (meeting/docs)                                       │
+│       ↓                                                      │
+│  ┌──────────────┐                                           │
+│  │  /process    │  ← AI extracts entities                    │
+│  └──────┬───────┘                                           │
+│         ↓                                                    │
+│  ┌──────────────┐                                           │
+│  │  _staging/   │  ← Human review queue                      │
+│  │              │     (approve / reject / edit)               │
+│  └──────┬───────┘                                           │
+│         ↓                                                    │
+│  ┌──────────────┐                                           │
+│  │  knowledge/  │  ← Approved entities stored               │
+│  │              │     (people, orgs, patterns)               │
+│  └──────────────┘                                           │
+│                                                              │
+│  ┌────────────────────────────────────────┐                  │
+│  │ 23 Commands: /reflect, /handoff,    │                  │
+│  │ /quest, /ask, /activity, /save, ...   │                  │
+│  └────────────────────────────────────────┘                  │
+│                                                              │
+└─────────────────────────────────────────────────────────────┘
+```
 
 ---
 
-## Architecture
+## Quick Start
 
 ```
 org-os instance
@@ -59,6 +90,45 @@ npx opal-bridge review --interactive
 
 # 5. Search knowledge base
 npx opal-bridge ask "What funding models do we use?"
+```
+
+**Knowledge Flow Diagram:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  OPAL → ORG-OS KNOWLEDGE PIPELINE                               │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  INPUT SOURCES                    PROCESSING                     │
+│  ┌──────────────┐                ┌──────────────┐               │
+│  │ content/     │ ──extract────► │   OPAL       │               │
+│  │ meetings/    │   (AI)         │  /process    │               │
+│  │     *.md     │                └──────┬───────┘               │
+│  └──────────────┘                       │                         │
+│                                         ↓                        │
+│  ┌──────────────┐                ┌──────────────┐               │
+│  │ data/*.yaml  │ ◄──────────── │   _staging/  │               │
+│  │ (structured) │   map to org   │  (entities)  │               │
+│  └──────────────┘                └──────┬───────┘               │
+│                                         │                         │
+│                                         ↓ HUMAN REVIEW            │
+│  OUTPUT                                ┌──────────────┐          │
+│  ┌──────────────┐ ◄───────────────── │  /review     │          │
+│  │ knowledge/   │    approve/edit    │  (manual)    │          │
+│  │ entities/    │ ◄──────────────────└──────────────┘          │
+│  │   people/    │                                               │
+│  │   orgs/      │                                               │
+│  │   concepts/  │                                               │
+│  └──────────────┘                                               │
+│                                                                  │
+│  GIT PERSISTENCE                                                 │
+│  ┌──────────────┐                                                │
+│  │ git commit   │  ← All changes versioned                       │
+│  │ "egregore:  │                                                │
+│  │  entities"  │                                                │
+│  └──────────────┘                                                │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
 ---
